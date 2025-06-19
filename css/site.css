@@ -1,36 +1,91 @@
-/* we can use a single css file to style all the files in our wwebsite */
 
-/* you can pick your own background colors, text colors, and fonts */
-
-/* we can select an html element tag, in this case "body" will apply to the whole document */
-body {
-  background-color: #50808E;
+/*
+      www.OnlineWebFonts.Com
+      You must credit the author Copy this link on your web
+      <div>Font made from <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>is licensed by CC BY 3.0</div>
+      OR
+      <a href="http://www.onlinewebfonts.com">oNline Web Fonts</a>
+*/
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("https://sufiyanyasa.com/css/opendyslexic/opendyslexic.woff2") format("woff2"); /* chrome firefox */
+}
+/*root*/
+*{
+  font-family: OpenDyslexic;
 }
 
-/* we can have rules apply to multiple elements at the same time with commas */
-h1,h2,h3 {
-  font-family: sans-serif;
+body{
+
+background-color: rgba(57, 57, 57, 0.4);
+background-image: url(stars.gif);
+background-repeat: round;
 }
 
-/* and we can have rules that overlap other rules, both take effect */
-h1 {
-  letter-spacing: 5px;
-  word-spacing: 5px;
-  font-size: 200%;
+/*links*/
+a{
+   color:black;
 }
-
-/* the hashtag in a CSS selector selects an element by id, e.g., id="content" */
-#content {
-  margin: 10px;
-  padding: 10px;
-  border: solid 1px #888;
-  background-color: #84B59F;
-}
-
-/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
 .minor-section {
   padding: 10px;
   margin-bottom: 10px;
-  border: solid 1px #888;
-  background-color: #A3C9A8;
+  border: solid 3px #000;
+  background-color: #747373ca;
+  text-indent: 2%;
+}
+
+@keyframes bounce {
+   0%, 100% {
+    transform: translateY(-2%) scaleY(1.001);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  49%{
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleX(1.015) scaleY(0.98);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  51%{
+    transform: scaleX(0.98) scaleY(1.01)
+  }
+}
+.profile-img {
+  display: block;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: -120px;
+  padding-right:-90px;
+  filter: invert(80%);
+  animation-name: "bounce";
+  animation-iteration-count: infinite;
+  animation-duration: .8s;
+  mask-image: url(circle-mask.png);
+  mask-position: top;
+  mask-size: 200px;
+  mask-repeat: no-repeat;
+  mask-border-mode: multiply;
+  mask-border-outset: -100px;
+}
+
+.mask1{
+}
+
+.name-gif {
+  display: block;
+  margin-top: -100px;
+  margin-bottom: -75px; 
+  margin-left: auto;
+  margin-right: auto; 
+  filter: grayscale(100%);
+  width: 50%;
+}
+
+#header{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#nav-links{
+list-style-type: none;
 }
