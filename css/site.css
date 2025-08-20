@@ -41,7 +41,7 @@ a{
 
 @keyframes bounce {
    0%, 100% {
-    transform: translateY(-2%) scaleY(1.001);
+    transform: translateY(-4%) scaleY(1.001);
     animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
   49%{
@@ -56,11 +56,9 @@ a{
   }
 }
 .profile-img {
-  display: block;
+  display: table-header-group;
   margin: auto;
-  margin-top: 20px;
-  margin-bottom: -120px;
-  padding-right:-90px;
+  margin-top: 2rem;
   filter: invert(80%);
   animation-name: "bounce";
   animation-iteration-count: infinite;
@@ -75,12 +73,11 @@ a{
 
 .name-gif {
   display: block;
-  margin-top: -10%;
-  margin-bottom: -75px; 
-  margin-left: auto;
-  margin-right: auto; 
+  margin: 0px;
+  padding-top: 2rem;
   filter: grayscale(100%);
-  width: 50%;
+  transform: rotate(-45deg); /* The magic line */
+  transform-origin: center; /* Rotates around the top-left corner */
 }
 
 #header{
