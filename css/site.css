@@ -39,6 +39,7 @@ a{
   min-width: fit-content;
 }
 
+
 @keyframes bounce {
    0%, 100% {
     transform: translateY(-4%) scaleY(1.001);
@@ -56,9 +57,11 @@ a{
   }
 }
 .profile-img {
-  display: table-header-group;
+  display: flex;
+  padding: auto;
   margin: auto;
-  margin-top: 2rem;
+  margin-bottom: -180px;
+  margin-left: 50%;
   filter: invert(80%);
   animation-name: "bounce";
   animation-iteration-count: infinite;
@@ -71,18 +74,14 @@ a{
   mask-border-outset: -100px;
 }
 
-.name-gif {
-  display: block;
-  margin: 0px;
-  padding-top: 2rem;
-  filter: grayscale(100%);
-  transform: rotate(-45deg); /* The magic line */
-  transform-origin: center; /* Rotates around the top-left corner */
-}
 
-#header{
-  margin-left: auto;
-  margin-right: auto;
+
+.name-gif {
+  margin-bottom: -180px;
+  margin-top: -100px;
+  padding: auto;
+  padding-top: 20px;
+  filter: grayscale(100%);
 }
 
 #nav-links{
@@ -97,7 +96,7 @@ blockquote{
   max-width: max-content;
 }
 
-#code-block-header{
+code-block-header{
   text-align: center;
   text-decoration: underline;
 }
