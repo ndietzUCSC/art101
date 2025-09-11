@@ -57,7 +57,7 @@ function myFunction(param1, param2) {
 
 function main() {
   
-  document.writeln("Types of transportation I use: ");
+  document.writeln("<h3>Types of transportation I use: </h3>");
   myTransport.forEach(element => {
     document.writeln("<li>" + element.make + " " + element.model + "</li>");
   });
