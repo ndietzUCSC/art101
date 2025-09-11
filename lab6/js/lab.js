@@ -1,8 +1,51 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+//Lab 6 Arrays and Objects
+// Author: Norah Dietz
+// Date: 9/10/25
 
 // Constants
+//array of transport modes
+
+//object creation for transport modes
+myMainRide = {
+  make: "Toyota",
+  model: "Prius",
+  color: "Silver",
+  year: 2010,
+  age: function() {
+    return 2025 - this.year;
+  }
+}
+sandals = {
+  make: "Birkenstock",
+	model: "Arizona",
+	color: "Black/Silver",
+	year: 2025,
+	age: function() {
+    return 2025 - this.year;
+	}
+}
+boots = {
+  make: "Doc Martens",
+	model: "1460",
+	color: "Black",
+	year: 2017,
+	age: function() {
+    return 2025 - this.year;
+	}
+}
+harrysCar = {
+  make: "Toyota",
+	model: "Matrix",
+	color: "Silver",
+	year: 2006,
+	age: function() {
+    return 2025 - this.year;
+	}
+}
+myTransport =[myMainRide, sandals, harrysCar, boots];
+
+//output
+
 
 // Functions
 
@@ -13,7 +56,11 @@ function myFunction(param1, param2) {
 }
 
 function main() {
-  console.log("Main function started.");
+  
+  document.writeln("Types of transportation I use: ");
+  myTransport.forEach(element => {
+    document.writeln("<li>" + element.make + " " + element.model + "</li>");
+  });
   // the code that makes everything happen
 }
 

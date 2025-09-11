@@ -18,30 +18,38 @@
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<!-- Link to javascript file - DEFER waits until all elements are rendered -->
 	<script type="text/javascript" src="./js/lab.js" DEFER></script>
+	<!-- forces browser agnostic file path for favicon -->
+	<link rel="icon" href="./img/favicon.ico">
 </head>
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	<main id="content">
 		<section>
-			<h1>Lab X - Subject/Topic</h1>
+			<h1>Lab 6 - Datatypes and Variables</h1>
 			<div class="minor-section">
 					<h2>Challenge</h2>
-					<p>Restate the challenge of the lab here.</p>
+					<p>Working with your partner, experiment with basic JavaScript data types and variables.</p>
+					<img src="./img/ai-mess-6.png"/>
 			</div>
 
 			<div class="minor-section">
 					<h2>Problems</h2>
-					<p>What problems arose? How did you solve them? </p>
+					<p>Safari's console, according to a locally run Qwen 2.5 1.5b parameter language model, "updates in chunks".</p>
+					<p>Sometimes this results in unexecuted code, or apparent freezes, which eventually resolve.</p>
+					<p>I also had to declare the array with no members, then define the variables before adding them, which seems like a Safari quirk.</p>
+					<p>UPDATE: Just noticed this is likely because I was trying to populate the array with variables instead of the strings, shown in the lab.</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Reflection</h2>
-					<p>Put your reflections about this assignment here. How did it go? What kind of energy did you put into the assignment? </p>
+					<p>I was a bit confused at points when certain lines of code wouldn't execute, and it was unclear whethter the issue was my syntax, 
+						Safari's console or both. I'll try Chrome next time.</p>
+					<p2> UPDATE: wrote some js to output the objects' makes and models using a forEach loop and a list</p2>
 			</div>
 
 			<div class="minor-section">
 					<h2>Results</h2>
-					<div id="output"></div>
+					<div id="output"><ul><script type="text/javascript" src="./js/lab.js"></script></ul></div>
 			</div>
 		</section>
 		<nav id="links">
