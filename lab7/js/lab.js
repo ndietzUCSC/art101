@@ -19,7 +19,7 @@ function sortGuestName() {
   var nameSorted = nameArraySort.join('');
   console.log("nameSorted = ", nameSorted); 
   
-  document.writeln("oh crap I dropped the letters into my sorting machine and they got all...sorted up... See? </br>");
+  document.writeln("oh crap I dropped the letters into my sorting machine and they got all...sorted up... See?");
   sortedString = nameSorted;
 }
 function namePrint(){
