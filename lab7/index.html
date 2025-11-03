@@ -22,6 +22,10 @@
 	<!-- forces browser agnostic file path for favicon -->
 	<link rel="icon" href="../favicon.ico">
 </head>
+<header>
+	<img class="name-gif" src="../img/name-flip.gif">
+</header>
+<img class="profile-img" src="../img/profile.jpeg">
 <body>
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	 <section>
@@ -57,11 +61,14 @@
 						<h2>Results</h2>
 						<div class="sub-section">
 							<h3>Script Output</h3>
+							<!--Calls sorting script, which summons the prompt, collects the data, sorts it, and stores that in a variable-->
 							<script>sortGuestName();</script>
+							<!--a different section styled with the special font. Calls a 
+								function which only returns the sorted string from earlier.-->
 								<div class="sub-section">
 									<div id="name-output">
-										<script>namePrint();</script>
-									</div>
+									<script>namePrint();</script>
+								</div>
 									<div id="citation">"Hangup" by Billy Argel Fonts</div>
 								</div>
 								
