@@ -1,50 +1,93 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-    <head> 
-        <title> WWW Dot Norah Bee Dot Website </title>
-        
-        <meta charset="UTF-8"/>
-       <link rel="stylesheet" type="text/css" href="../css/site.css">
-       <link rel="icon" href="./img/favicon.ico">
-    
-   <!-- <link rel="stylesheet" type="text/css" href=ART101/lab2/css/site.css"?>-->
-    
-</head>
+<head>
+	<!-- This title is used for tabs and bookmarks -->
+	<title>Lab 7 - Functions</title>
 
+	<!-- Use UTF character set, a good idea with any webpage -->
+  	<meta charset="UTF-8" />
+	<!-- Set viewport so page remains consistently scaled w narrow devices -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<!-- Include a sitewide CSS file for consistent styling across the site -->
+	<link rel="stylesheet" type="text/css" href="../css/site.css">
+	<!-- Lab-specifc CSS file for any special styling of this particular page -->
+	<link rel="stylesheet" type="text/css" href="./css/lab.css">
+	
+	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	
+	<script src="js/lab.js"></script>
+	
+	<!-- forces browser agnostic file path for favicon -->
+	<link rel="icon" href="../favicon.ico">
+</head>
 <header>
 	<img class="name-gif" src="../img/name-flip.gif">
 </header>
 <img class="profile-img" src="../img/profile.jpeg">
-
 <body>
-    <main id="content">
-        <section>
-            <h1> welcome to my website! </h1>
-            <div class="minor-section">
-                    <h2> testing, hello</h2>
-                    <p> this is an html page styled with css, wow! :0</p>
-            </div>
-        </section>
-        <section>
-			<h1>Lab 2 Questions</h1>
-			<div class="minor-section">
+	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
+	 <section>
+		 <div class="minor-section">
+				<h1>Lab 7 - Functions</h1>
 					<h2>Challenge</h2>
-					<p>Create a webpage by drafting or editing html/css and linking those plain text files</p>
+					<p> Using a function, prompt the visitor to enter their name. Take that string, cast it to an array, 
+						sort it alphabetically, make that array back into a string and print it on the html. 
+					</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Problems</h2>
-					<p> I was a bit unclear on the exact content requirements for the page, so I followed the template closely, as did my partner.</p>
+					<p>I continually forget how the file-relative path references work. 
+						So it took me a minute to get my JS to actually run. I also ran the script twice because
+						I added it to the head. I realized this is because the writeLn executes as soon as the 
+						script loads, since it is in the main body of the file. 
+					</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Reflection</h2>
-					<p>I wish I had started a bit earlier so I could have tweaked the site more. </p>
+					<div class="sub-section">
+					<p>This went pretty smoothly, but I also wanted to do my silly stuff, and wresteld with
+						whether I could format the name output with a different font. This would likely require me 
+						to pass the sorted name into a different function...actually one sec. <br> Ok I learned how to
+						import a font using base64, so that's fun.
+					</p>
+					</div>
 			</div>
-		</section>
-    <div class="minor-section"><a href="../index.html">back to the homepage</a></div>
-    </main>
-</body>
 
-            
+			<div class="minor-section">
+						<h2>Results</h2>
+						<div class="sub-section">
+							<h3>Script Output</h3>
+							<!--Calls sorting script, which summons the prompt, collects the data, sorts it, and stores that in a variable-->
+							<script>sortGuestName();</script>
+							<!--a different section styled with the special font. Calls a 
+								function which only returns the sorted string from earlier.-->
+								<div class="sub-section">
+									<div id="name-output">
+									<script>namePrint();</script>
+								</div>
+									<div id="citation">"Hangup" by Billy Argel Fonts</div>
+								</div>
+								
+						</div>
+			</div>
+			<footer>
+			<nav id="links">
+				<!-- Put links to other pages (including the homepage) here. -->
+				 <ul id="nav-links">
+					<li><a href="../index.html">Home</a></li> 
+					<li><a href="../lab2/">Lab 2: Your First HTML</a></li> 
+					<li><a href="../lab3/">Lab 3: File Structure</a></li>
+					<li><a href="../lab4/">Lab 4: Pseudocoding and Problem Solving</a></li>
+					<li><a href="../lab5/">Lab 5: Variables  and Datatypes</a></li>
+					<li><a href="../lab6/">Lab 6: Arrays and Objects</a></li>
+					<li><a href="../lab7/">Lab 7: Functions</a></li>
+					</ul>
+			</nav>
+			</footer>
+		</section>
+</body>
 </html>
