@@ -2,8 +2,9 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab 7 - Functions</title>
-
+	<title>Lab 8 - Anon Functions and Callbacks</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/lab.js" DEFER></script>
 	<!-- Use UTF character set, a good idea with any webpage -->
   	<meta charset="UTF-8" />
 	<!-- Set viewport so page remains consistently scaled w narrow devices -->
@@ -13,11 +14,8 @@
 	<link rel="stylesheet" type="text/css" href="../css/site.css">
 	<!-- Lab-specifc CSS file for any special styling of this particular page -->
 	<link rel="stylesheet" type="text/css" href="./css/lab.css">
+
 	
-	<!-- load jQuery library to make javascript easier (must be above our lab js)-->
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-	
-	<script src="js/lab.js"></script>
 	
 	<!-- forces browser agnostic file path for favicon -->
 	<link rel="icon" href="../favicon.ico">
@@ -30,29 +28,25 @@
 	<!-- Style this page by changing the CSS in ../css/site.css or css/lab.css -->
 	 <section>
 		 <div class="minor-section">
-				<h1>Lab 7 - Functions</h1>
+				<h1>Lab 8 - Anon Functions and Callbacks</h1>
 					<h2>Challenge</h2>
-					<p> Using a function, prompt the visitor to enter their name. Take that string, cast it to an array, 
-						sort it alphabetically, make that array back into a string and print it on the html. 
+					<p> Use anonymous functions and callbacks to operarte on an array of numbers.
 					</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Problems</h2>
-					<p>I continually forget how the file-relative path references work. 
-						So it took me a minute to get my JS to actually run. I also ran the script twice because
-						I added it to the head. I realized this is because the writeLn executes as soon as the 
-						script loads, since it is in the main body of the file. 
+					<p>I had a duplicate of my lab.js link in the head of my HTML, 
+						which was not using DEFER, so it was breaking the JQuery output.
+						Once I spotted that, everything else went smoothly.
 					</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Reflection</h2>
 					<div class="sub-section">
-					<p>This went pretty smoothly, but I also wanted to do my silly stuff, and wresteld with
-						whether I could format the name output with a different font. This would likely require me 
-						to pass the sorted name into a different function...actually one sec. <br> Ok I learned how to
-						import a font using base64, so that's fun.
+					<p> For whatever reason, I don't really enjoy the syntax of javascript. I also find working with
+						the console to be a bit confusing. But, ultimately no big problems.
 					</p>
 					</div>
 			</div>
@@ -60,18 +54,9 @@
 			<div class="minor-section">
 						<h2>Results</h2>
 						<div class="sub-section">
-							<h3>Script Output</h3>
-							<!--Calls sorting script, which summons the prompt, collects the data, sorts it, and stores that in a variable-->
-							<script>sortGuestName();</script>
-							<!--a different section styled with the special font. Calls a 
-								function which only returns the sorted string from earlier.-->
-								<div class="sub-section">
-									<div id="name-output">
-									<script>namePrint();</script>
-								</div>
-									<div id="citation">"Hangup" by Billy Argel Fonts</div>
-								</div>
-								
+							<h3>Raw Script Output</h3>
+							
+							<div id="output"></div>
 						</div>
 			</div>
 			<footer>
@@ -85,6 +70,7 @@
 					<li><a href="../lab5/">Lab 5: Variables  and Datatypes</a></li>
 					<li><a href="../lab6/">Lab 6: Arrays and Objects</a></li>
 					<li><a href="../lab7/">Lab 7: Functions</a></li>
+					<li><a href="../lab8/">Lab 7: Anon Functions and Callbacks</a></li>
 					</ul>
 			</nav>
 			</footer>
