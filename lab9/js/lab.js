@@ -1,29 +1,28 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+// lab.js - purpose and description here
+// Author: Norah Dietz
+// Date: November 2025
 
 // Constants
 
 // Functions
-var sortedString;
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function sortGuestName() {
-  var guestName = window.prompt("Hello, what's your name?");
-  console.log("guestName = ", guestName);
-  //cast string to array
-  var nameArray = guestName.split('');
-  //sort array
-  var nameArraySort = nameArray.sort();
-  console.log("nameArraySort = ", nameArraySort);
-  //array to string
-  var nameSorted = nameArraySort.join('');
-  console.log("nameSorted = ", nameSorted); 
-  
-  document.writeln("oh crap I dropped the letters into my sorting machine and they got all...sorted up... See?");
-  sortedString = nameSorted;
-}
-function namePrint(){
-  document.writeln(sortedString);
-}
-  
+// make buttons for challenge, problems, and results sections
+$("#challenge").append("<button id='button-challenge'>Challenge Button</button>");
+$("#problems").append("<button id='button-problems'>Problem Button</button>");
+$("#results").append("<button id='button-results'>Results Button</button>");
 
+// add a click listener to the challenge button
+$("#button-challenge").click(function(){
+    // now add (or subtract) the "special" class to the section
+    $("#challenge").toggleClass("special");
+    console.log("challenge clicked");
+});
+$("#button-problems").click(function(){
+    // now add (or subtract) the "special" class to the section
+    $("#problems").toggleClass("special");
+    console.log("problems clicked");
+});
+$("#button-results").click(function(){
+    // now add (or subtract) the "special" class to the section
+    $("#results").toggleClass("special");
+    console.log("results clicked");
+});
