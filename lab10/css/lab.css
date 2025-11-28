@@ -23,3 +23,6 @@ blockquote{
   margin: auto;
   margin-top: 0.75rem;
 }
+.text p {
+  font-family: Hangup;
+}
