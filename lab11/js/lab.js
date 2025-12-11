@@ -6,10 +6,15 @@
 
 // Functions
 var sortedString;
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function sortGuestName() {
-  var guestName = window.prompt("Hello, what's your name?");
-  console.log("guestName = ", guestName);
+$("#submit").click(function(){
+  var guestName; 
+  guestName = $("#user-name").val();
+  // now let's sort it
+  var guestNameSorted = sortGuestName(guestName);
+  // append a new div to our output div
+  $("#name-output").html('<div class="name-output"><p>' + guestNameSorted + '</p></div>');
+});
+function sortGuestName(guestName) {
   //cast string to array
   var nameArray = guestName.split('');
   //sort array
@@ -18,12 +23,15 @@ function sortGuestName() {
   //array to string
   var nameSorted = nameArraySort.join('');
   console.log("nameSorted = ", nameSorted); 
-  
-  document.writeln("oh crap I dropped the letters into my sorting machine and they got all...sorted up... See?");
   sortedString = nameSorted;
+  return nameSorted;
 }
 function namePrint(){
   document.writeln(sortedString);
 }
+  // click listener for button  
+
+
+// get value of input field
   
 

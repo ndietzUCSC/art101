@@ -5,7 +5,7 @@
 
 #name-output{
   font-family: Hangup;
-  font-size: 15rem;
+  font-size: auto;
 }
 #citation{
   display: flexbox;

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab 9 - jQuery and Libraries </title>
+	<title>Lab 11 - JS Events and Forms </title>
 	
 	<!-- Libraries and Scripts-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -28,14 +28,16 @@
 <body>
 	 <section>
 		 <div class="minor-section">
-				<h1>Lab 9 - jQuery and Libraries </h1>
+				<h1>Lab 11 - JS Events and Forms</h1>
 					<h2>Challenge</h2>
 					<div id="Challenge">
 						
 					</div>
 					<p> 
-						Use anonymous functions and callbacks to operarte on an array of numbers.
+						Use events and listeners to accept text input, transform the text, and output it. 
 					</p>
+					<input  type="text" id="user-name" placeholder="Input your name">
+					<button id="submit">Submit</button>
 			</div>
 
 			<div class="minor-section">
@@ -44,9 +46,8 @@
 
 					</div>
 					<p>
-						I had a duplicate of my lab.js link in the head of my HTML, 
-						which was not using DEFER, so it was breaking the JQuery output.
-						Once I spotted that, everything else went smoothly.
+						Since I was reusing a few different labs' code, I had a few missmatched tags/ids on divs. 
+						After finding those, it was not much trouble.
 					</p>
 			</div>
 
@@ -57,34 +58,42 @@
 
 					</div>
 					<p> 
-						For whatever reason, I don't really enjoy the syntax of javascript. 
-						I also find working with the console to be a bit confusing. But, ultimately no big problems.
+						This seems like a more rational and powerful way to put JS events into HTML pages. 
+						I do unfortunately feel like my eyes are going to explode everytime I see a jQuery file though. 
+						So many dollar signs!
 					</p>
 			</div>
 
 			<div class="minor-section">
-					<h2>Results</h2>
-					<div class="sub-section">
-						<h3>Raw Script Output</h3>
-						<div id="output"></div>
-					</div>
+			<h2>Results</h2>
+				<div class="sub-section">
+					<h3>Script Output</h3>
+						<div class="sub-section">
+							<div id="name-output">
+							</div>
+						<div id="citation">"Hangup" by Billy Argel Fonts</div>
+						</div>
+				</div>
 			</div>
 			
-			<footer>
-			<nav id="links">
-				<!-- Put links to other pages (including the homepage) here. -->
-				 <ul id="nav-links">
-					<li><a href="../index.html">Home</a></li> 
-					<li><a href="../lab2/">Lab 2: Your First HTML</a></li> 
-					<li><a href="../lab3/">Lab 3: File Structure</a></li>
-					<li><a href="../lab4/">Lab 4: Pseudocoding and Problem Solving</a></li>
-					<li><a href="../lab5/">Lab 5: Variables  and Datatypes</a></li>
-					<li><a href="../lab6/">Lab 6: Arrays and Objects</a></li>
-					<li><a href="../lab7/">Lab 7: Functions</a></li>
-					<li><a href="../lab8/">Lab 7: Anon Functions and Callbacks</a></li>
-					</ul>
-			</nav>
-			</footer>
 		</section>
+		<footer>
+		<nav id="links">
+			<!-- Put links to other pages (including the homepage) here. -->
+			 <ul id="nav-links">
+				<li><a href="../index.html">Home</a></li> 
+				<li><a href="../lab2/">Lab 2: Your First HTML</a></li> 
+				<li><a href="../lab3/">Lab 3: File Structure</a></li>
+				<li><a href="../lab4/">Lab 4: Pseudocoding and Problem Solving</a></li>
+				<li><a href="../lab5/">Lab 5: Variables  and Datatypes</a></li>
+				<li><a href="../lab6/">Lab 6: Arrays and Objects</a></li>
+				<li><a href="../lab7/">Lab 7: Functions</a></li>
+				<li><a href="../lab8/">Lab 8: Anon Functions and Callbacks</a></li>
+				<li><a href="../lab9/">Lab 9: jQuery and Libraries</a></li>
+				<li><a href="../lab10/">Lab 10: Javascript and the Web</a></li>
+				<li><a href="../lab11/">Lab 11 - JS Events and Forms</a></li>
+				</ul>
+		</nav>
+		</footer>
 </body>
 </html>
