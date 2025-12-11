@@ -29,9 +29,7 @@ function sortGuestName(guestName) {
 function namePrint(){
   document.writeln(sortedString);
 }
-  // click listener for button  
 
 
-// get value of input field
   
 
