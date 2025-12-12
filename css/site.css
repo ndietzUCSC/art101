@@ -136,11 +136,11 @@ footer{
 
 #hero-image{
   margin: auto;
-  max-height: 20rem;;
+  max-height: 15rem;;
 }
 
 #image-container{
-  display: inline-flex;
+  display: flex;
   justify-content: center;
 }
 

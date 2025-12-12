@@ -23,3 +23,8 @@ blockquote{
   margin: auto;
   margin-top: 0.75rem;
 }
+
+#lab-image{
+  display: flex;
+  align-items: center;
+}
