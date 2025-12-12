@@ -12,13 +12,6 @@ $('#button').click(function () {
   if (clicked) return;          // prevent multiple clicks
   clicked = true;
 
-  var rawDate = $('#date').val();   // expects an <input id="date">
-  var formattedDate = new Date(rawDate).toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric'
-  });
-
   $.ajax({
     url: 'https://mercuryretrogradeapi.com',
     method: 'GET',
