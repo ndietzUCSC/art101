@@ -22,18 +22,17 @@ $('#button').click(function () {
   $.ajax({
     url: 'https://mercuryretrogradeapi.com',
     method: 'GET',
-    data: { },
     dataType: 'json',
     success: function (data) {
       var isRetrograde = data.is_retrograde;
 
       if (isRetrograde) {
         $('#output').append(
-          "<p>Yes, Mercury is in retrograde on: " + formattedDate + "</p>"
+          "<p>Yes, Mercury is in retrograde today.</p>"
         );
       } else {
-        $('#output-date').append(
-          "<p>No, Mercury is not in retrograde on: " + formattedDate + "</p>"
+        $('#output').append(
+          "<p>No, Mercury is not in retrograde today. </p>"
         );
       }
     },
