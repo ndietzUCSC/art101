@@ -3,27 +3,85 @@
 // Date:
 
 // Constants
-
+var clicked = false;
 // Functions
-var sortedString;
-// this is an example function and this comment tells what it doees and what parameters are passed to it.
-function sortGuestName() {
-  var guestName = window.prompt("Hello, what's your name?");
-  console.log("guestName = ", guestName);
-  //cast string to array
-  var nameArray = guestName.split('');
-  //sort array
-  var nameArraySort = nameArray.sort();
-  console.log("nameArraySort = ", nameArraySort);
-  //array to string
-  var nameSorted = nameArraySort.join('');
-  console.log("nameSorted = ", nameSorted); 
-  
-  document.writeln("oh crap I dropped the letters into my sorting machine and they got all...sorted up... See?");
-  sortedString = nameSorted;
-}
-function namePrint(){
-  document.writeln(sortedString);
-}
-  
+var dateVal = "";
 
+//check today's date for retrograde status, can only be clicked once.
+$('#button').click(function () {
+  if (clicked) return;          // prevent multiple clicks
+  clicked = true;
+
+  var rawDate = $('#date').val();   // expects an <input id="date">
+  var formattedDate = new Date(rawDate).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
+  $.ajax({
+    url: 'https://mercuryretrogradeapi.com',
+    method: 'GET',
+    data: { },
+    dataType: 'json',
+    success: function (data) {
+      var isRetrograde = data.is_retrograde;
+
+      if (isRetrograde) {
+        $('#output').append(
+          "<p>Yes, Mercury is in retrograde on: " + formattedDate + "</p>"
+        );
+      } else {
+        $('#output-date').append(
+          "<p>No, Mercury is not in retrograde on: " + formattedDate + "</p>"
+        );
+      }
+    },
+    error: function (xhr, status, error) {
+      console.error('AJAX error:', error);
+    },
+  });
+});
+
+
+//date grabber for the input field
+$('#date').on('change', function() {
+        dateVal = $(this).val();
+        console.log("Selected date: " + dateVal);
+    });
+    
+//date specfic function. Can be called multiple times, to check different dates.
+$('#date-button').click(function () {
+  var rawDate = $('#date').val();        // e.g., "2025-01-05"
+  console.log(rawDate);
+
+  // Convert to readable format
+  var formattedDate = new Date(rawDate).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
+  $.ajax({
+    url: 'https://mercuryretrogradeapi.com',
+    method: 'GET',
+    data: { date: rawDate },
+    dataType: 'json',
+    success: function (data) {
+      var isRetrograde = data.is_retrograde;
+
+      if (isRetrograde) {
+        $('#output').append(
+          "<p>Yes, Mercury is in retrograde on: " + formattedDate + "</p>"
+        );
+      } else {
+        $('#output-date').append(
+          "<p>No, Mercury is not in retrograde on: " + formattedDate + "</p>"
+        );
+      }
+    },
+    error: function (xhr, status, error) {
+      console.error('AJAX error:', error);
+    }
+  });
+});

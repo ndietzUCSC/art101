@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab 9 - jQuery and Libraries </title>
+	<title>Lab 15 - AJAX</title>
 	
 	<!-- Libraries and Scripts-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -28,13 +28,13 @@
 <body>
 	 <section>
 		 <div class="minor-section">
-				<h1>Lab 9 - jQuery and Libraries </h1>
+				<h1>Lab 15 - AJAX</h1>
 					<h2>Challenge</h2>
 					<div id="Challenge">
 						
 					</div>
 					<p> 
-						Use anonymous functions and callbacks to operarte on an array of numbers.
+						Use an api via AJAX.
 					</p>
 			</div>
 
@@ -44,9 +44,9 @@
 
 					</div>
 					<p>
-						I had a duplicate of my lab.js link in the head of my HTML, 
-						which was not using DEFER, so it was breaking the JQuery output.
-						Once I spotted that, everything else went smoothly.
+						I conferred with chatGPT for a few quick touchups, such as converting
+						the printed date to a readible format. But, this api is very simple
+						and I had no issues working with it. 
 					</p>
 			</div>
 
@@ -57,16 +57,32 @@
 
 					</div>
 					<p> 
-						For whatever reason, I don't really enjoy the syntax of javascript. 
-						I also find working with the console to be a bit confusing. But, ultimately no big problems.
+						This was fun. I added the date picker to give myself an extra
+						challenge, which also required me to learn about .on('change'),
+						which will certainly come in handy. The api list where I found this
+						had a template for the JS using a more truncated GET call.
+						But the AJAX approach made it clearer what was going on.
 					</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Results</h2>
 					<div class="sub-section">
-						<h3>Raw Script Output</h3>
+						<h3> Astral Answers - NOW:
+						<hr>
+						<button id="button">
+							Is Mercury in retrograde today?
+						</button>
 						<div id="output"></div>
+						<div>
+						<h3>Try a specific date!</h3>
+						</div>
+							<small>(ex: July 17-August 11 2025 was retrograde.)</small>
+						<div>
+						<hr>
+						<input type="date" id="date" name="date"><button id="date-button"> Submit </button>
+						</div>
+						<div id="output-date"></div>
 					</div>
 			</div>
 			
