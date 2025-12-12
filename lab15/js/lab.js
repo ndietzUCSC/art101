@@ -1,6 +1,6 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+// index.js - Is mercury in retrograde api call
+// Author: Norah Dietz 
+// Date: 12/12/2025
 
 // Constants
 var clicked = false;
@@ -25,7 +25,7 @@ $('#button').click(function () {
         );
       } else {
         $('#output').append(
-          "<p>No, Mercury is not in retrograde today. </p>"
+          "<p> No, Mercury is not in retrograde today. </p>"
         );
       }
     },
@@ -63,7 +63,7 @@ $('#date-button').click(function () {
       var isRetrograde = data.is_retrograde;
 
       if (isRetrograde) {
-        $('#output').append(
+        $('#output-date').append(
           "<p>Yes, Mercury is in retrograde on: " + formattedDate + "</p>"
         );
       } else {
