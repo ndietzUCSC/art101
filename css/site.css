@@ -95,10 +95,10 @@ footer{
   }
 }
 .profile-img {
-  display: flex;
+  display: flexbox;
   padding: auto;
   margin-bottom: -100px;
-  margin-left: 50%;
+  margin-left: 65%;
   margin-right: 0rem;
   filter: invert(80%);
   animation-name: "bounce";
@@ -110,13 +110,15 @@ footer{
   mask-repeat: no-repeat;
   mask-border-mode: multiply;
   mask-border-outset: -100px;
-  position: absolute;
+  box-sizing: border-box;
+  position: fixed;
   bottom: 0;
   right: 0;
 }
 
 .name-gif {
-
+  display: flex;
+  margin: auto;
   filter: grayscale(100%);
 }
 
@@ -133,6 +135,7 @@ footer{
 }
 
 #hero-image{
+  margin: auto;
   max-height: 20rem;;
 }
 

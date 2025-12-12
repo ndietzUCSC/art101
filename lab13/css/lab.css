@@ -13,13 +13,16 @@
   padding-top: 1%;
   align-self: inherit;
 }
-#name-container{
+#output {
   align-self: center;
   display: flex;
   align-items: center;
-  max-width: min-content;
+  min-width: 50%;
+  flex-wrap: wrap; /* enable wrapping to multiple columns */
 }
 blockquote{
   margin: auto;
-  margin-top: 0.75rem;
+  min-width: 50%;
+  max-height: 3%;
 }
+
