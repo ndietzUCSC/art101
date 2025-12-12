@@ -58,7 +58,7 @@ $('#date-button').click(function () {
   var formattedDate = new Date(rawDate).toLocaleDateString('en-US', {
     year: 'numeric',
     month: 'long',
-    day: 'numeric'
+    day: '2-digit',
   });
 
   $.ajax({
