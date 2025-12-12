@@ -12,7 +12,7 @@ $("#submit").click(function(){
   // now let's sort it
   var guestNameSorted = sortGuestName(guestName);
   // append a new div to our output div
-  $("#name-output").html('<div class="name-output"><p>' + guestNameSorted + '</p></div>');
+  $("#output").html('<div class="name-output"><p>' + guestNameSorted + '</p></div>');
 });
 function sortGuestName(guestName) {
   //cast string to array
@@ -26,8 +26,8 @@ function sortGuestName(guestName) {
   sortedString = nameSorted;
   return nameSorted;
 }
-function namePrint(){
-  document.writeln(sortedString);
+function namePrint(nameSorted) {
+  document.writeln();
 }
 
 
