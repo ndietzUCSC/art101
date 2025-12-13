@@ -9,7 +9,7 @@
 $('#button').on('click', function () {
 
   $.ajax({
-    url: 'https://xkcd.com/info.0.json',
+    url: 'https://corsproxy.io/https://xkcd.com/info.0.json',
     method: 'GET',
     dataType: 'json',
     success: function (data) {
@@ -18,11 +18,10 @@ $('#button').on('click', function () {
       // Section title using comicObj.title
       $('#comic-title').text(comicObj.title);
 
-      // Image using comicObj.img, with alt and title attributes
+      // Image using comicObj.img, with alt text
       $('#comic-image')
         .attr('src', comicObj.img)
         .attr('alt', comicObj.alt)
-        .attr('title', comicObj.alt);
     },
     error: function (xhr, status, error) {
       console.error('AJAX error:', error);

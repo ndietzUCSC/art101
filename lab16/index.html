@@ -2,7 +2,7 @@
 <html>
 <head>
 	<!-- This title is used for tabs and bookmarks -->
-	<title>Lab 9 - jQuery and Libraries </title>
+	<title>Lab 16 - JSON and APIs </title>
 	
 	<!-- Libraries and Scripts-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -30,13 +30,13 @@
 <body>
 	 <section>
 		 <div class="minor-section">
-				<h1>Lab 9 - jQuery and Libraries </h1>
+				<h1>Lab 16 - JSON and APIs</h1>
 					<h2>Challenge</h2>
 					<div id="Challenge">
 						
 					</div>
 					<p> 
-						Use anonymous functions and callbacks to operarte on an array of numbers.
+						Call the XKCD API and format the JSON output. 
 					</p>
 			</div>
 
@@ -46,9 +46,8 @@
 
 					</div>
 					<p>
-						I had a duplicate of my lab.js link in the head of my HTML, 
-						which was not using DEFER, so it was breaking the JQuery output.
-						Once I spotted that, everything else went smoothly.
+						See my lab PDF for full details, but I had trouble getting access to 
+						the api. Eventually, using a CORS proxy worked. 
 					</p>
 			</div>
 
@@ -59,20 +58,19 @@
 
 					</div>
 					<p> 
-						For whatever reason, I don't really enjoy the syntax of javascript. 
-						I also find working with the console to be a bit confusing. But, 
-						ultimately no big problems.
+						This is a classic reminder that it's good to take a break 
+						and come back to something. It was a quick fix, once I had
+						fresh eyes on the problem. 
 					</p>
 			</div>
 
 			<div class="minor-section">
 					<h2>Results</h2>
 				<button id="button">Load Comic</button>
-
-				<section id="comic-section">
-  				<h2 id="comic-title"></h2>
-  				<img id="comic-image">
-			</section>
+				<section id="comic-title">
+					<h2 id="comic-alt"></h2>
+				</section>
+				<img id="comic-image">
 
 			</div>
 			
